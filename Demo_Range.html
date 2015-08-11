@@ -1,0 +1,26 @@
+
+<html>  
+  <head>  
+        <meta charset="utf-8">  
+        <title>D3-Range</title>  
+  </head> 
+ 
+    <body>  
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="d3_widgets_range.js" charset="utf-8"></script>
+        <script>
+			
+			var stage = d3.select("body").append("svg").attr("width",1000).attr("height",600).append("g").attr("transform","translate(100,100)");
+			
+			var s1 = d3.svg.range().height(20).width(300).cursorSize(20).fill("#3498db")
+			.onchange(function(){
+				console.log(s1.getValue());
+			})
+			.draw(stage);
+			
+
+			
+        </script>  
+		
+    </body>  
+</html>
